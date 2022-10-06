@@ -1,7 +1,7 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="f4v@*OBYEhzN2SY2Q0aZ" x="0" y="0"><statement name="HANDLER"><block type="device_show_leds" id="pg!gC(Iu/iN;6n*!z%D}"><field name="LEDS">`
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="RAhH+A`JvV-c|Ta65VKy">test</variable></variables><block type="pxt-on-start" id="f4v@*OBYEhzN2SY2Q0aZ" x="13" y="-23"><statement name="HANDLER"><block type="device_show_leds" id="pg!gC(Iu/iN;6n*!z%D}"><field name="LEDS">`
         . . . # . 
         . . . # . 
         . # # # . 
         . # . # . 
         . # . # .
-        `</field></block></statement></block><block type="device_forever" id="rf*z6^J6DeWr?I;X$3fv" x="-2" y="336"></block></xml>
+        `</field></block></statement></block><block type="bluetooth_on_connected" id="=vP{.CC,f={(zc{ff@1J" x="256" y="-13"><statement name="HANDLER"><block type="basic_show_icon" id="heLO2IZoAQzILZw,,wG["><field name="i">IconNames.Happy</field></block></statement></block><block type="bluetooth_on_disconnected" id="c}M+/@!eLx8|#q,KeMJ2" x="528" y="-18"><statement name="HANDLER"><block type="basic_show_icon" id="-hM28@NBZ%-qaQ/~O#oR"><field name="i">IconNames.Sad</field></block></statement></block><block type="device_forever" id="rf*z6^J6DeWr?I;X$3fv" x="9" y="321"><statement name="HANDLER"><block type="controls_if" id="IRUqdt2oJV)R0N,!y2/K"><value name="IF0"><shadow type="logic_boolean" id="2J3EG78IbbK]i297.wTX"><field name="BOOL">TRUE</field></shadow><block type="device_pin_is_pressed" id="zutPRV2h(AUm28ffBi1C"><field name="NAME">TouchPin.P0</field></block></value></block></statement></block></xml>
