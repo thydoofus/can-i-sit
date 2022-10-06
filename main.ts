@@ -1,21 +1,16 @@
 bluetooth.onBluetoothConnected(function () {
     basic.showIcon(IconNames.Happy)
+    basic.pause(1000)
 })
 bluetooth.onBluetoothDisconnected(function () {
     basic.showIcon(IconNames.Sad)
+    basic.pause(1000)
 })
 // need bluetooth mouse service to be activated. (press A+B)
 input.onButtonPressed(Button.A, function () {
     mouse.click()
     basic.showIcon(IconNames.Happy)
     basic.pause(100)
-    basic.showLeds(`
-        . # . . .
-        . # # . .
-        . # # # .
-        . # # . .
-        . . . # .
-        `)
 })
 input.onButtonPressed(Button.AB, function () {
     // bluetooth mouse service activated
@@ -27,19 +22,17 @@ input.onButtonPressed(Button.AB, function () {
         . # # . .
         . . . # .
         `)
+    basic.pause(1000)
 })
-basic.showLeds(`
-    . . . # .
-    . . . # .
-    . # # # .
-    . # . # .
-    . # . # .
-    `)
+let Pressure_sensor = 0
+basic.showIcon(IconNames.Rollerskate)
 basic.forever(function () {
-    if (input.pinIsPressed(TouchPin.P0)) {
+    Pressure_sensor = pins.analogReadPin(AnalogPin.P0)
+    if (Pressure_sensor > 10) {
         mouse.click()
-        if (input.pinIsPressed(TouchPin.P0)) {
-            mouse.click()
-        }
+        basic.showIcon(IconNames.Yes)
+    } else {
+        mouse.click()
+        basic.showIcon(IconNames.Rollerskate)
     }
 })
